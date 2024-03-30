@@ -60,7 +60,7 @@ export async function POST(req) {
     const user = {
       clerkId: id,
       email: email_addresses[0]?.email_address,
-      username,
+      username: username || email_addresses[0]?.email_address?.split('@')[0],
       firstName: first_name,
       lastName: last_name,
       photo: image_url
@@ -76,7 +76,7 @@ export async function POST(req) {
      })
     }
 
-    return NextResponse.json({ user: newUser })
+    return NextResponse.json({ message: 'OK', user: newUser })
   }
 
   if (eventType === 'user.updated') {
