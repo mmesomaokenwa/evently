@@ -9,10 +9,11 @@ export async function connectToDatabase() {
 
   if (!MONGODB_URI) throw new Error("Please define the MONGODB_URI environment variable inside .env.local");
 
-  cached.promise = cached.promise || mongoose.connect(MONGODB_URI, {
-    dbName: "evently",
-    bufferCommands: false
-  }).then((mongoose) => mongoose);
+  cached.promise =
+    cached.promise || mongoose.connect(MONGODB_URI, {
+      dbName: "evently",
+      bufferCommands: false,
+    });
 
   cached.conn = await cached.promise;
   
