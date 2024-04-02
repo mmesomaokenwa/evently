@@ -5,6 +5,7 @@ import User from "../models/user.model";
 import { connectToDatabase } from "..";
 import Event from "../models/event.model";
 import Order from "../models/order.model";
+import { revalidatePath } from "next/cache";
 
 export const createUser = async (user) => {
   try {

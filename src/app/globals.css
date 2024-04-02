@@ -228,6 +228,11 @@ body {
   .toggle-switch {
     @apply bg-gray-300 !important;
   }
+
+  /* LOADERS */
+  .loader {
+    @apply w-[30px] h-[30px] border-2 border-t-transparent border-primary-500 rounded-full animate-spin;
+  }
 }
 
 /* ========================================== CLERK STYLES */

@@ -28,7 +28,7 @@ const eventSchema = new Schema({
     default: Date.now
   },
   price: {
-    type: Number,
+    type: String,
   },
   isFree: {
     type: Boolean,

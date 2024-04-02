@@ -11,7 +11,7 @@ const OrderSchema = new Schema({
     unique: true,
   },
   totalAmount: {
-    type: Number,
+    type: String,
   },
   event: {
     type: Schema.Types.ObjectId,
